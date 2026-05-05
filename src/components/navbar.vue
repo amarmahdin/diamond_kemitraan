@@ -1,7 +1,16 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
+import { useRouter } from 'vue-router'
 import topo from '../assets/img/Topo.png'
+import { useAuthStore } from '@/stores/auth'
 
+const router = useRouter()
+const auth = useAuthStore()
+
+function logoutToLogin() {
+  auth.logout()
+  router.push('/')
+}
 </script>
 
 <template>
@@ -19,7 +28,7 @@ import topo from '../assets/img/Topo.png'
                 <path d="M12.9339 8.32706H14.2407V13.4407C14.2384 13.9095 14.1389 14.3131 13.9424 14.6516C13.7459 14.9878 13.4713 15.247 13.1186 15.4293C12.7682 15.6093 12.3598 15.6992 11.8934 15.6992C11.4673 15.6992 11.0838 15.6235 10.7429 15.472C10.4043 15.3181 10.1356 15.0908 9.93675 14.7901C9.73789 14.4895 9.63846 14.1154 9.63846 13.668H10.9488C10.9512 13.8645 10.9938 14.0337 11.0767 14.1758C11.1619 14.3178 11.2791 14.4267 11.4282 14.5025C11.5774 14.5782 11.749 14.6161 11.9431 14.6161C12.1538 14.6161 12.3326 14.5723 12.4794 14.4847C12.6261 14.3948 12.7374 14.2622 12.8132 14.087C12.8913 13.9118 12.9315 13.6964 12.9339 13.4407V8.32706Z" fill="#333333"/>
             </svg>
             <span class="text-base text-[#666666] mr-2 font-medium">John Doe</span>
-            <svg width="16" height="16" class="cursor-pointer mt-1" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+            <svg width="16" height="16" class="cursor-pointer mt-1" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" @click="logoutToLogin"> 
                 <rect width="16" height="16" rx="8" fill="#E5E7E9"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.13743 9.8419C7.92622 10.0531 7.58378 10.0531 7.37257 9.8419L4.66841 7.13773C4.4572 6.92652 4.4572 6.58409 4.66841 6.37288C4.87962 6.16167 5.22205 6.16167 5.43326 6.37288L7.755 8.69462L10.0767 6.37288C10.2879 6.16167 10.6304 6.16167 10.8416 6.37288C11.0528 6.58409 11.0528 6.92652 10.8416 7.13773L8.13743 9.8419Z" fill="#2671D9"/>
             </svg>

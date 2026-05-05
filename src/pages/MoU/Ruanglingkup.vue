@@ -8,7 +8,7 @@ import Sidebar from '@/components/sidebar.vue';
 <template>
     <div class="flex">
         <Sidebar/>
-        <div class="flex-grow">
+        <div class="flex-grow min-w-0">
             <Navbar/>
             <div class="h-[54px] flex">
                 <h1 class="text-[#2671D9] text-sm ml-6 mt-3">Buat</h1>
@@ -20,7 +20,7 @@ import Sidebar from '@/components/sidebar.vue';
             <div class="h-auto py-3 px-4 bg-slate-100">
 
                 <!-- Start Content -->
-                <div class="w-[1217px] p-1 rounded-lg h-auto bg-white mx-auto min-h-screen">
+                <div class="w-full max-w-[1217px] p-1 rounded-lg h-auto bg-white mx-auto min-h-screen">
                     <div class="flex pl-4 pt-4">
                         <div class="w-[6px] h-7 bg-[#2671D9]"></div>
                         <h1 class="text-xl font-medium ml-[6px]">MoU/NDA</h1>
@@ -28,7 +28,7 @@ import Sidebar from '@/components/sidebar.vue';
                     <span class="text-base text-[#9C9C9C] pl-4">Formulir Pengajuan Mitra</span>
 
                     <!-- Start Layout angka -->
-                    <div class="w-[1217px] h-[59px]">
+                    <div class="w-full max-w-[1217px] h-[59px]">
                         <div class="flex justify-center mt-4">
                             <div class="flex flex-col items-center">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

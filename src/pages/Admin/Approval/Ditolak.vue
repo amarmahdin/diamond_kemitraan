@@ -7,7 +7,7 @@ import navadmin from '@/components/navadmin.vue';
 <template>
     <div class="flex">    
     <sidemanager/>
-    <div class="flex-grow">
+    <div class="flex-grow min-w-0">
         <navadmin/>
         <div class="w-auto h-[54px]">
             <h1 class="text-sm text-[#7F7F80] pt-3 ml-6 font-medium">Approval</h1>
@@ -15,7 +15,7 @@ import navadmin from '@/components/navadmin.vue';
         <div class="h-auto py-3 px-4 bg-slate-100">
 
             <!-- Start Content -->
-            <div class="w-[1217px] h-auto p-1 rounded-lg bg-white min-h-screen mx-auto">
+            <div class="w-full max-w-[1217px] h-auto p-1 rounded-lg bg-white min-h-screen mx-auto">
                 <div class="flex pl-4 pt-4">
                     <div class="w-[6px] h-7 bg-[#2671D9]"></div>
                     <h1 class="text-xl font-medium ml-[6px]">Approval</h1>
@@ -126,7 +126,7 @@ import navadmin from '@/components/navadmin.vue';
                 </div>
 
                 <!-- All -->
-                <div v-if="isFilterVisibleAll" class="w-[1170px] h-[44px] border-[1px] rounded-lg mt-4 ml-4 flex justify-between">
+                <div v-if="isFilterVisibleAll" class="w-full max-w-[1170px] h-[44px] border-[1px] rounded-lg mt-4 ml-4 flex justify-between">
                                 <div class="px-[10px] py-[10px] flex">
                                     <div v-if="isFilterVisibleType" class="w-[60px] h-[24px] bg-[#E9F1FB] border-[1px] border-[#BAD1F3] rounded-[100px] flex justify-between">
                                         <span class=" text-xs text-[#2671D9] font-semibold ml-[10px] mt-[3px]">{{ filterType }}</span>
@@ -147,7 +147,7 @@ import navadmin from '@/components/navadmin.vue';
                             </div>
 
                 <!-- Start Data -->
-                <div class="w-[1170px] overflow-auto rounded-lg border-[1px] mt-4 ml-4 h-auto">
+                <div class="w-full max-w-[1170px] overflow-auto rounded-lg border-[1px] mt-4 ml-4 h-auto">
                     <table class="table-auto w-full text-left ">
                         <!-- Kolom -->
                         <thead class="text-xs text-[#4D5E80] rounded-lg">
@@ -253,7 +253,7 @@ import navadmin from '@/components/navadmin.vue';
             </div>
 
                 <!-- Start Menampilkan -->
-                <div class="w-[1170px] ml-4 py-3  flex justify-between">
+                <div class="w-full max-w-[1170px] ml-4 py-3  flex justify-between">
                     <div class="flex">
                     <span class="text-sm text-[#333333] mt-[5px]">Menampilkan</span>
                     <div class="w-[44px] ml-4 relative data-container">

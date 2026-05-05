@@ -7,7 +7,7 @@ import Sidemanager from '@/components/sidemanager.vue';
 <template>
     <div class="flex">    
     <Sidemanager/>
-    <div class="flex-grow">
+    <div class="flex-grow min-w-0">
         <Navadmin/>
         <div class="h-[54px] flex">
                 <router-link to="/Prosesadmin"><h1 class="text-[#2671D9] text-sm ml-6 mt-3">Proses</h1></router-link>
@@ -19,8 +19,8 @@ import Sidemanager from '@/components/sidemanager.vue';
         <div class="h-auto py-3 px-4 bg-slate-100">
 
             <!-- Start Content -->
-            <div class="w-[1217px] h-auto p-1 rounded-lg bg-white min-h-screen mx-auto">
-                <div class="w-[1170px] h-[56px] ml-4 mt-4 flex justify-between">
+            <div class="w-full max-w-[1217px] h-auto p-1 rounded-lg bg-white min-h-screen mx-auto">
+                <div class="w-full max-w-[1170px] h-[56px] ml-4 mt-4 flex justify-between">
                     <div>
                     <div class="flex">
                         <div class="w-[6px] h-7 bg-[#2671D9]"></div>
@@ -68,8 +68,8 @@ import Sidemanager from '@/components/sidemanager.vue';
 
                 <div class="mt-4">
                     <!-- Informasi Umum -->
-                    <div class="w-[1170px] h-auto border-[1px] rounded-lg ml-4">
-                        <button @click="informasiDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#4791F2] -translate-y-[1px] rounded-s-lg"></div>
+                    <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg ml-4">
+                        <button @click="informasiDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#4791F2] -translate-y-[1px] rounded-s-lg"></div>
                         <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Informasi Umum</h1>
                         <svg width="12" height="8" class="mt-[22px] translate-x-[968px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownInformasi ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
@@ -147,8 +147,8 @@ import Sidemanager from '@/components/sidemanager.vue';
                     </div>
 
                     <!-- Lingkup Pekerjaan -->
-                    <div class="w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
-                        <button @click="pekerjaanDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#FFA229] -translate-y-[1px] rounded-s-lg"></div>
+                    <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
+                        <button @click="pekerjaanDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#FFA229] -translate-y-[1px] rounded-s-lg"></div>
                         <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Lingkup Pekerjaan</h1>
                         <svg width="12" height="8" class="mt-[22px] translate-x-[956px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownPekerjaan ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
@@ -156,7 +156,7 @@ import Sidemanager from '@/components/sidemanager.vue';
                         <div v-if="dropdownPekerjaan" class="px-6 mt-6">
                         <h1 class="text-[#333333]">Calon Mitra Bisnis</h1>
                         <span class="text-[#7F7F80]">-</span>
-                        <div class="w-[1120px] overflow-auto rounded-lg border-[1px] mb-3 mt-3">
+                        <div class="w-full max-w-[1120px] overflow-auto rounded-lg border-[1px] mb-3 mt-3">
                         <table class="table-auto w-full text-left ">
                             <!-- Kolom -->
                             <thead class="text-xs h-[48px] text-[#4D5E80] rounded-lg">
@@ -196,14 +196,14 @@ import Sidemanager from '@/components/sidemanager.vue';
                     </div>
 
                     <!-- Informasi RAB -->
-                    <div class="w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
-                        <button @click="rabDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#0FB37D] -translate-y-[1px] rounded-s-lg"></div>
+                    <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
+                        <button @click="rabDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#0FB37D] -translate-y-[1px] rounded-s-lg"></div>
                         <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Informasi RAB</h1>
                         <svg width="12" height="8" class="mt-[22px] translate-x-[986px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownRab ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
                         </svg></button>
                         <div v-if="dropdownRab" class="px-6 mt-6">
-                        <div class="w-[1120px] overflow-auto rounded-lg border-[1px] mb-3 mt-3">
+                        <div class="w-full max-w-[1120px] overflow-auto rounded-lg border-[1px] mb-3 mt-3">
                         <table class="table-auto w-full text-left ">
                             <!-- Kolom -->
                             <thead class="text-xs h-[48px] text-[#4D5E80] rounded-lg">
@@ -306,8 +306,8 @@ import Sidemanager from '@/components/sidemanager.vue';
                     </div>
 
                     <!-- Berkas Lampiran -->
-                    <div class="w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
-                        <button @click="berkasDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#F42495] -translate-y-[1px] rounded-s-lg"></div>
+                    <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
+                        <button @click="berkasDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#F42495] -translate-y-[1px] rounded-s-lg"></div>
                         <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Berkas Lampiran</h1>
                         <svg width="12" height="8" class="mt-[22px] translate-x-[968px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownBerkas ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
@@ -412,8 +412,8 @@ import Sidemanager from '@/components/sidemanager.vue';
                     </div>
 
                     <!-- Progres Kemitraan -->
-                    <div class="w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
-                        <button @click="progresDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#CE8861] -translate-y-[1px] rounded-s-lg"></div>
+                    <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
+                        <button @click="progresDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#CE8861] -translate-y-[1px] rounded-s-lg"></div>
                         <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Dokumen Progress Kemitraan</h1>
                         <svg width="12" height="8" class="mt-[22px] translate-x-[870px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownProgres ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
@@ -464,7 +464,7 @@ import Sidemanager from '@/components/sidemanager.vue';
                     </div>
                 </div>
 
-                <div class="w-[1170px] mt-4 ml-4 mb-4 flex justify-between">
+                <div class="w-full max-w-[1170px] mt-4 ml-4 mb-4 flex justify-between">
                     <div>
                         <h1 class="text-base text-[#4D5E80] font-semibold">Tanggapan</h1>
                         <div class="w-[561px] h-[88px] bg-[#E0E0E0] border-[1px] border-[#E5E7E9] rounded-lg mt-2">
@@ -490,7 +490,7 @@ import Sidemanager from '@/components/sidemanager.vue';
                 <div>
                     <!-- Alur -->
                     <div v-if="isOpen" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg shadow-lg w-[1040.84px] h-[660px]">
+                        <div class="bg-white rounded-lg shadow-lg w-full max-w-[1041px] max-h-[90vh] overflow-y-auto">
                             <div class="flex ml-[20px] mt-[20px]">
                                 <div class="w-[6px] h-7 bg-[#2671D9]"></div>
                                 <h1 class="text-xl font-medium ml-[6px]">Progres Kemitraan</h1>
@@ -500,7 +500,7 @@ import Sidemanager from '@/components/sidemanager.vue';
                             </div>
                             <span class="text-base text-[#9C9C9C] ml-[20px]">$judul_pengajuan</span>
 
-                            <div class="w-[1000px] h-[500px] ml-[20px] mt-6">
+                            <div class="ml-[20px] mr-4 mt-6 w-[calc(100%-2rem)] max-w-[1000px] max-h-[min(500px,55vh)] overflow-auto">
                                 <div class="flex w-auto h-[130px]">
                                     <!-- Surat Penawaran -->
                                     <!-- Upload -->

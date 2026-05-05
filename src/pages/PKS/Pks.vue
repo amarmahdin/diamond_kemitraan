@@ -2,14 +2,12 @@
 <script setup>
 import Navbar from '@/components/navbar.vue';
 import Sidebar from '@/components/sidebar.vue';
-
-
 </script>
 
 <template>
     <div class="flex">
         <Sidebar/>
-        <div class="flex-grow">
+        <div class="flex-grow min-w-0">
             <Navbar/>
             <div class="h-[54px] flex">
                 <h1 class="text-[#2671D9] text-sm ml-6 mt-3">Buat</h1>
@@ -21,15 +19,15 @@ import Sidebar from '@/components/sidebar.vue';
             <div class="h-auto py-3 px-4 bg-slate-100">
 
                 <!-- Start Content -->
-                <div class="w-[1217px] p-1 rounded-lg h-auto bg-white min-h-screen mx-auto">
+                <div class="w-full max-w-[1217px] p-1 rounded-lg h-auto bg-white min-h-screen mx-auto">
                     <div class="flex pl-4 pt-4">
                         <div class="w-[6px] h-7 bg-[#2671D9]"></div>
                         <h1 class="text-xl font-medium ml-[6px]">PKS</h1>
-                     </div>
-                     <span class="text-base text-[#9C9C9C] pl-4">Formulir Pengajuan Mitra</span>
+                    </div>
+                    <span class="text-base text-[#9C9C9C] pl-4">Formulir Pengajuan Mitra</span>
 
-                     <!-- Start Layout angka -->
-                     <div class="w-[1217px] h-[59px]">
+                    <!-- Start Layout angka -->
+                    <div class="w-full max-w-[1217px] h-[59px]">
                         <div class="flex justify-center mt-4">
                             <div class="flex flex-col items-center">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,11 +93,11 @@ import Sidebar from '@/components/sidebar.vue';
                                 <span class="text-sm text-[#9C9C9C] mt-1">Lampiran</span>
                             </div>
                         </div>
-                     </div>
-                     <!-- End layout angka -->
+                    </div>
+                    <!-- End layout angka -->
 
-                     <h1 class="text-xl font-medium pl-4 py-6">Dasar</h1>
-                     <div class="pl-4 w-[1155px] flex justify-between">
+                    <h1 class="text-xl font-medium pl-4 py-6">Dasar</h1>
+                    <div class="pl-4 w-[1155px] flex justify-between">
 
                         <!-- Jenis Kemitraan -->
                         <div>
@@ -235,52 +233,52 @@ import { ref } from 'vue';
 const isJenisOpen = ref(false);
 const jenissOption = ref('');
 function jenisDropdown() {
-  isJenisOpen.value = !isJenisOpen.value;
-  isTipeOpen.value = false;
-  isMetodeOpen.value = false;
-  isMaterialOpen.value = false;
+    isJenisOpen.value = !isJenisOpen.value;
+    isTipeOpen.value = false;
+    isMetodeOpen.value = false;
+    isMaterialOpen.value = false;
 }
 function jenisOption(option) {
     jenissOption.value = option;
-  isJenisOpen.value = false;  
+    isJenisOpen.value = false;  
 }
 
 // Tipe Anggaran
 const isTipeOpen = ref(false);
 const tipeeOption = ref(''); 
 function tipeDropdown() {
-  isTipeOpen.value = !isTipeOpen.value;
-  isJenisOpen.value = false;
-  isMetodeOpen.value = false;
-  isMaterialOpen.value = false;
+    isTipeOpen.value = !isTipeOpen.value;
+    isJenisOpen.value = false;
+    isMetodeOpen.value = false;
+    isMaterialOpen.value = false;
 }
 function tipeOption(option) {
     tipeeOption.value = option;
-  isTipeOpen.value = false;  
+    isTipeOpen.value = false;  
 }
 
 // Metode Kemitraan
 const isMetodeOpen = ref(false);
 const metodeeOption = ref('');
 function metodeDropdown() {
-  isMetodeOpen.value = !isMetodeOpen.value;
-  isJenisOpen.value = false;
-  isTipeOpen.value = false;
-  isMaterialOpen.value = false;
+    isMetodeOpen.value = !isMetodeOpen.value;
+    isJenisOpen.value = false;
+    isTipeOpen.value = false;
+    isMaterialOpen.value = false;
 }
 function metodeOption(option) {
     metodeeOption.value = option;
-  isMetodeOpen.value = false;  
+    isMetodeOpen.value = false;  
 }
 
 // Jenis Material
 const isMaterialOpen = ref(false);
 const materiallOption = ref(''); 
 function materialDropdown() {
-  isMaterialOpen.value = !isMaterialOpen.value;
-  isJenisOpen.value = false;
-  isTipeOpen.value = false;
-  isMetodeOpen.value = false;
+    isMaterialOpen.value = !isMaterialOpen.value;
+    isJenisOpen.value = false;
+    isTipeOpen.value = false;
+    isMetodeOpen.value = false;
 }
 function materialOption(option) {
     materiallOption.value = option;
@@ -289,13 +287,13 @@ function materialOption(option) {
 
 // Date
 export default {
-  data() {
+    data() {
     return {
-      showDatePicker: false,
-      selectedDate: ''
+        showDatePicker: false,
+        selectedDate: ''
     };
-  },
-  mounted() {
+    },
+    mounted() {
     this.filterClickListener = (e) => {
         if (!e.target.closest('.jenis-container') 
         && !e.target.closest('.tipe-container')

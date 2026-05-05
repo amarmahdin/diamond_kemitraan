@@ -7,7 +7,7 @@ import navbar from '../components/navbar.vue'
 <template>
     <div class="flex">    
     <sidebar/>
-    <div class="flex-grow">
+    <div class="flex-grow min-w-0">
         <navbar/>
         <div class="h-[54px] flex">
                 <router-link to="/Draft"><h1 class="text-[#2671D9] text-sm ml-6 mt-3">Draft</h1></router-link>
@@ -19,8 +19,8 @@ import navbar from '../components/navbar.vue'
         <div class="h-auto py-3 px-4 bg-slate-100">
 
             <!-- Start Content -->
-            <div class="w-[1217px] h-auto p-1 rounded-lg bg-white min-h-screen mx-auto">
-                <div class="w-[1170px] h-[56px] ml-4 mt-4 flex justify-between">
+            <div class="w-full max-w-[1217px] h-auto p-1 rounded-lg bg-white min-h-screen mx-auto">
+                <div class="w-full max-w-[1170px] h-[56px] ml-4 mt-4 flex justify-between">
                     <div>
                     <div class="flex">
                         <div class="w-[6px] h-7 bg-[#2671D9]"></div>
@@ -32,7 +32,7 @@ import navbar from '../components/navbar.vue'
                 </div>
 
                 <!-- Status Approval Approve Manager -->
-                <div class="w-[1170px] h-[58px] bg-[#E2FCF3] border-[#0EA976] border-[1px] rounded-lg ml-4 mt-4 flex p-3">
+                <div class="w-full max-w-[1170px] h-[58px] bg-[#E2FCF3] border-[#0EA976] border-[1px] rounded-lg ml-4 mt-4 flex p-3">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8849 4.62468C17.3258 4.06756 18.1523 3.96002 18.731 4.3845C19.3097 4.80898 19.4214 5.60472 18.9805 6.16185L10.1066 17.3754C9.87619 17.6665 9.52645 17.8476 9.1472 17.8721C8.76794 17.8967 8.39616 17.7623 8.12738 17.5035L3.13581 12.6978C2.6214 12.2025 2.6214 11.3995 3.13581 10.9042C3.65021 10.409 4.48423 10.409 4.99864 10.9042L8.92446 14.684L16.8849 4.62468Z" fill="#0EA976"/>
                     </svg>
@@ -40,7 +40,7 @@ import navbar from '../components/navbar.vue'
                 </div>
 
                 <!-- Status Approval Revisi -->
-                <!-- <div class="w-[1170px] h-[58px] bg-[#FEF6EC] border-[#F08800] border-[1px] rounded-lg ml-4 mt-3 flex p-3">
+                <!-- <div class="w-full max-w-[1170px] h-[58px] bg-[#FEF6EC] border-[#F08800] border-[1px] rounded-lg ml-4 mt-3 flex p-3">
                     <svg width="20" height="20" class="mt-1" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 2.66634C5.94983 2.66634 2.66659 5.94959 2.66659 9.99967C2.66659 14.0498 5.94983 17.333 9.99992 17.333C14.05 17.333 17.3333 14.0498 17.3333 9.99967C17.3333 5.94959 14.05 2.66634 9.99992 2.66634ZM0.833252 9.99967C0.833252 4.93706 4.93731 0.833008 9.99992 0.833008C15.0625 0.833008 19.1666 4.93706 19.1666 9.99967C19.1666 15.0623 15.0625 19.1663 9.99992 19.1663C4.93731 19.1663 0.833252 15.0623 0.833252 9.99967ZM9.99992 6.33301C10.5062 6.33301 10.9166 6.74341 10.9166 7.24967V10.6872C10.9166 11.1934 10.5062 11.6038 9.99992 11.6038C9.49366 11.6038 9.08325 11.1934 9.08325 10.6872V7.24967C9.08325 6.74341 9.49366 6.33301 9.99992 6.33301ZM9.08325 13.4372C9.08325 12.9309 9.49366 12.5205 9.99992 12.5205H10.0068C10.5131 12.5205 10.9235 12.9309 10.9235 13.4372V13.444C10.9235 13.9503 10.5131 14.3607 10.0068 14.3607H9.99992C9.49366 14.3607 9.08325 13.9503 9.08325 13.444V13.4372Z" fill="#F08800"/>
                     </svg>
@@ -49,8 +49,8 @@ import navbar from '../components/navbar.vue'
 
                 <!-- Informasi Umum -->
                 <div class="mt-3">
-                <div class="w-[1170px] h-auto border-[1px] rounded-lg ml-4">
-                    <button @click="informasiDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#4791F2] -translate-y-[1px] rounded-s-lg"></div>
+                <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg ml-4">
+                    <button @click="informasiDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#4791F2] -translate-y-[1px] rounded-s-lg"></div>
                     <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Informasi Umum</h1>
                     <svg width="12" height="8" class="mt-[22px] translate-x-[967px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownInformasi ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
@@ -128,8 +128,8 @@ import navbar from '../components/navbar.vue'
                 </div>
 
                 <!-- Lingkup Pekerjaan -->
-                <div class="w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
-                    <button @click="pekerjaanDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#FFA229] -translate-y-[1px] rounded-s-lg"></div>
+                <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
+                    <button @click="pekerjaanDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#FFA229] -translate-y-[1px] rounded-s-lg"></div>
                     <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Lingkup Pekerjaan</h1>
                     <svg width="12" height="8" class="mt-[22px] translate-x-[956px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownPekerjaan ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
@@ -137,7 +137,7 @@ import navbar from '../components/navbar.vue'
                     <div v-if="dropdownPekerjaan" class="px-6 mt-6">
                     <h1 class="text-[#333333]">Calon Mitra Bisnis</h1>
                     <span class="text-[#7F7F80]">-</span>
-                    <div class="w-[1120px] overflow-auto rounded-lg border-[1px] mb-3 mt-3">
+                    <div class="w-full max-w-[1120px] overflow-auto rounded-lg border-[1px] mb-3 mt-3">
                     <table class="table-auto w-full text-left ">
                         <!-- Kolom -->
                         <thead class="text-xs h-[48px] text-[#4D5E80] rounded-lg">
@@ -177,14 +177,14 @@ import navbar from '../components/navbar.vue'
                 </div>
 
                 <!-- Informasi RAB -->
-                <div class="w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
-                    <button @click="rabDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#0FB37D] -translate-y-[1px] rounded-s-lg"></div>
+                <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
+                    <button @click="rabDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#0FB37D] -translate-y-[1px] rounded-s-lg"></div>
                     <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Informasi RAB</h1>
                     <svg width="12" height="8" class="mt-[22px] translate-x-[986px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownRab ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
                     </svg></button>
                     <div v-if="dropdownRab" class="px-6 mt-6">
-                    <div class="w-[1120px] overflow-auto rounded-lg border-[1px] mb-3 mt-3">
+                    <div class="w-full max-w-[1120px] overflow-auto rounded-lg border-[1px] mb-3 mt-3">
                     <table class="table-auto w-full text-left ">
                         <!-- Kolom -->
                         <thead class="text-xs h-[48px] text-[#4D5E80] rounded-lg">
@@ -287,8 +287,8 @@ import navbar from '../components/navbar.vue'
                 </div>
 
                 <!-- Berkas Lampiran -->
-                <div class="w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
-                    <button @click="berkasDropdown" class="flex w-[1170px] h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#F42495] -translate-y-[1px] rounded-s-lg"></div>
+                <div class="w-full max-w-[1170px] h-auto border-[1px] rounded-lg mt-4 ml-4">
+                    <button @click="berkasDropdown" class="flex w-full h-[48px] rounded-lg border-b-[1px]"><div class="w-[30px] h-[49px] bg-[#F42495] -translate-y-[1px] rounded-s-lg"></div>
                     <h1 class="text-base font-semibold ml-[10px] mt-[12px]">Berkas Lampiran</h1>
                     <svg width="12" height="8" class="mt-[22px] translate-x-[968px]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" :d="dropdownBerkas ? 'M6.70711 7.20711C6.31658 7.59763 5.68342 7.59763 5.29289 7.20711L0.292893 2.20711C-0.0976316 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L6 5.08579L10.2929 0.792893C10.6834 0.402369 11.3166 0.402369 11.7071 0.792893C12.0976 1.18342 12.0976 1.81658 11.7071 2.20711L6.70711 7.20711Z' : 'M5.29289 0.792893C5.68342 0.402369 6.31658 0.402369 6.70711 0.792893L11.7071 5.79289C12.0976 6.18342 12.0976 6.81658 11.7071 7.20711C11.3166 7.59763 10.6834 7.59763 10.2929 7.20711L6 2.91421L1.70711 7.20711C1.31658 7.59763 0.683417 7.59763 0.292893 7.20711C-0.0976317 6.81658 -0.0976316 6.18342 0.292893 5.79289L5.29289 0.792893Z'" fill="#2671D9"/>
@@ -393,7 +393,7 @@ import navbar from '../components/navbar.vue'
                 </div>
                 </div>
 
-                <div class="w-[1170px] mt-4 ml-4 mb-4 flex justify-between">
+                <div class="w-full max-w-[1170px] mt-4 ml-4 mb-4 flex justify-between">
                     <div>
                         <h1 class="text-base text-[#4D5E80] font-semibold">Tanggapan</h1>
                         <div class="w-[561px] h-[88px] bg-[#E0E0E0] border-[1px] border-[#E5E7E9] rounded-lg mt-2">

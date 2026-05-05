@@ -14,31 +14,31 @@ import deliv4 from '../assets/img/Delivered4.png'
 <template>
     <div class="flex">    
     <sidebar/>
-    <div class="flex-grow">
+    <div class="flex-grow min-w-0">
         <navbar/>
         <div class="w-auto h-[54px]"></div>
         <div class="h-auto py-3 px-4 bg-slate-100">
 
             <!-- Start Content -->
-            <div class="w-[1217px] h-auto p-1 rounded-lg bg-white min-h-screen mx-auto">
+            <div class="w-full max-w-[1217px] h-auto p-1 rounded-lg bg-white min-h-screen mx-auto">
                 <div class="flex pl-4 pt-4">
                     <div class="w-[6px] h-7 bg-[#2671D9]"></div>
                     <h1 class="text-xl font-medium ml-[6px]">Dashboard</h1>
                 </div>
                 <span class="text-base text-[#9C9C9C] pl-4">Dashboard User</span>
-                <div class="w-[1170px] h-[100px] bg-[#2671D9] ml-4 mt-4 rounded-lg">
+                <div class="w-full max-w-[1170px] h-[100px] bg-[#2671D9] ml-4 mt-4 rounded-lg">
                     <div class="ml-[23px] flex">
                         <img :src="user" alt="User Image" class="w-[18px] h-[18px] mt-[23px]">
                         <div class="mt-[23px]">
                             <h1 class="text-[15px] ml-2 text-white font-medium">OFFICER KEMITRAAN BISNIS</h1>
-                            <h1 class="text-[20px] text-white ml-2 mt-2 w-[600px]">Staff Sub Bidang Kemitraan Bisnis Konektivitas dan Infrastruktur</h1>
+                            <h1 class="text-[20px] text-white ml-2 mt-2 max-w-[600px] w-full min-w-0">Staff Sub Bidang Kemitraan Bisnis Konektivitas dan Infrastruktur</h1>
                         </div>
                         <img :src="group" alt="Group Image" class="ml-[275px] rounded-lg">
                     </div>
                 </div>
 
                 <!-- Data -->
-                <div class="w-[1170px] h-[68px] ml-4 mt-6 flex justify-between">
+                <div class="w-full max-w-[1170px] h-[68px] ml-4 mt-6 flex justify-between">
                     <div class="w-[196.4px] h-full bg-[#5197F9] border-[1px] rounded-lg flex justify-between">
                         <div class="mt-[5px] ml-4">
                             <span class="text-xs text-white">Total Permintaan</span>
@@ -168,7 +168,7 @@ import deliv4 from '../assets/img/Delivered4.png'
                     </div>
 
                 <!-- All -->
-                <div v-if="isFilterVisibleAll" class="w-[1170px] h-[44px] border-[1px] rounded-lg mt-4 ml-4 flex justify-between">
+                <div v-if="isFilterVisibleAll" class="w-full max-w-[1170px] h-[44px] border-[1px] rounded-lg mt-4 ml-4 flex justify-between">
                     <div class="px-[10px] py-[10px] flex">
                         <div v-if="isFilterVisibleType" class="w-[60px] h-[24px] bg-[#E9F1FB] border-[1px] border-[#BAD1F3] rounded-[100px] flex justify-between">
                             <span class=" text-xs text-[#2671D9] font-semibold ml-[10px] mt-[3px]">{{ filterType }}</span>
@@ -189,7 +189,7 @@ import deliv4 from '../assets/img/Delivered4.png'
                 </div>    
 
                 <!-- Start Data -->
-                <div class="w-[1170px] overflow-auto rounded-lg border-[1px] mt-4 ml-4 h-auto">
+                <div class="w-full max-w-[1170px] overflow-auto rounded-lg border-[1px] mt-4 ml-4 h-auto">
                     <table class="table-auto w-full text-left">
                         <!-- Kolom -->
                         <thead class="text-xs text-[#4D5E80] rounded-lg h-[48px]">
@@ -263,7 +263,7 @@ import deliv4 from '../assets/img/Delivered4.png'
                 </div>
 
                 <!-- Start Menampilkan -->
-                <div class="w-[1170px] ml-4 py-3 flex justify-between">
+                <div class="w-full max-w-[1170px] ml-4 py-3 flex justify-between">
                     <div class="flex">
                     <span class="text-sm text-[#333333] mt-[5px]">Menampilkan</span>
                     <div class="w-[44px] ml-4 relative filter-data-container">

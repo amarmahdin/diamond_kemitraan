@@ -2,13 +2,12 @@
 <script setup>
 import Navbar from '@/components/navbar.vue';
 import Sidebar from '@/components/sidebar.vue';
-
 </script>
 
 <template>
     <div class="flex">
         <Sidebar/>
-        <div class="flex-grow">
+        <div class="flex-grow min-w-0">
             <Navbar/>
             <div class="h-[54px] flex">
                 <h1 class="text-[#2671D9] text-sm ml-6 mt-3">Buat</h1>
@@ -20,15 +19,15 @@ import Sidebar from '@/components/sidebar.vue';
             <div class="h-auto py-3 px-4 bg-slate-100">
 
                 <!-- Start Content -->
-                <div class="w-[1217px] p-1 rounded-lg h-auto bg-white min-h-screen mx-auto">
+                <div class="w-full max-w-[1217px] p-1 rounded-lg h-auto bg-white min-h-screen mx-auto">
                     <div class="flex pl-4 pt-4">
                         <div class="w-[6px] h-7 bg-[#2671D9]"></div>
                         <h1 class="text-xl font-medium ml-[6px]">MoU/NDA</h1>
-                     </div>
-                     <span class="text-base text-[#9C9C9C] pl-4">Formulir Pengajuan Mitra</span>
+                    </div>
+                    <span class="text-base text-[#9C9C9C] pl-4">Formulir Pengajuan Mitra</span>
 
-                     <!-- Start Layout angka -->
-                     <div class="w-[1217px] h-[59px]">
+                    <!-- Start Layout angka -->
+                    <div class="w-full max-w-[1217px] h-[59px]">
                         <div class="flex justify-center mt-4">
                             <div class="flex flex-col items-center">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,11 +80,11 @@ import Sidebar from '@/components/sidebar.vue';
                                 <span class="text-sm text-[#9C9C9C] mt-1">Lampiran</span>
                             </div>
                         </div>
-                     </div>
-                     <!-- End layout angka -->
+                    </div>
+                    <!-- End layout angka -->
 
-                     <h1 class="text-xl text-[#333333] font-medium pl-4 py-6">Lainnya</h1>
-                     <div class="w-[1160px] h-auto flex justify-between">
+                    <h1 class="text-xl text-[#333333] font-medium pl-4 py-6">Lainnya</h1>
+                    <div class="w-[1160px] h-auto flex justify-between">
 
                         <!-- Latar Belakang -->
                         <div class="ml-4">
@@ -102,9 +101,9 @@ import Sidebar from '@/components/sidebar.vue';
                                 <input type="text" placeholder="Masukkan Catatan" class="w-[400px] outline-none">
                             </form>
                         </div>
-                     </div>
+                    </div>
 
-                     <svg width="1150" class="mt-56 ml-4" height="1" viewBox="0 0 1150 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="1150" class="mt-56 ml-4" height="1" viewBox="0 0 1150 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="1150" height="0" transform="translate(0 1)" fill="white"/>
                         <line y1="0.5" x2="1150" y2="0.5" stroke="#E5E7E9"/>
                     </svg>

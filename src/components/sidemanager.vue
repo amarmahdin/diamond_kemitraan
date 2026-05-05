@@ -8,7 +8,7 @@ import { computed } from 'vue';
 
 <template>
     <div class="flex">
-      <div class="w-[248px] h-auto border-e-[1px]">
+      <div class="w-[248px] shrink-0 h-auto border-e-[1px]">
         <div class="flex justify-between mt-8 ml-4 mr-4">
           <svg width="77" height="13" viewBox="0 0 77 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="77" height="13" fill="url(#pattern0_1287_569)"/>

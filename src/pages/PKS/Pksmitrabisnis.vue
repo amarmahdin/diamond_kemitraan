@@ -8,7 +8,7 @@ import Sidebar from '@/components/sidebar.vue';
 <template>
     <div class="flex">
         <Sidebar/>
-        <div class="flex-grow">
+        <div class="flex-grow min-w-0">
             <Navbar/>
             <div class="h-[54px] flex">
                 <h1 class="text-[#2671D9] text-sm ml-6 mt-3">Buat</h1>
@@ -20,7 +20,7 @@ import Sidebar from '@/components/sidebar.vue';
             <div class="h-auto py-3 px-4 bg-slate-100">
 
                 <!-- Start Content -->
-                <div class="w-[1217px] p-1 rounded-lg h-auto bg-white min-h-screen mx-auto">
+                <div class="w-full max-w-[1217px] p-1 rounded-lg h-auto bg-white min-h-screen mx-auto">
                     <div class="flex pl-4 pt-4">
                         <div class="w-[6px] h-7 bg-[#2671D9]"></div>
                         <h1 class="text-xl font-medium ml-[6px]">PKS</h1>
@@ -28,7 +28,7 @@ import Sidebar from '@/components/sidebar.vue';
                      <span class="text-base text-[#9C9C9C] pl-4">Formulir Pengajuan Mitra</span>
 
                      <!-- Start Layout angka -->
-                     <div class="w-[1217px] h-[59px]">
+                     <div class="w-full max-w-[1217px] h-[59px]">
                         <div class="flex justify-center mt-4">
                             <div class="flex flex-col items-center">
                                 <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,11 +94,11 @@ import Sidebar from '@/components/sidebar.vue';
                      <!-- End layout angka -->
 
                      <h1 class="text-xl text-[#333333] font-medium pl-4 py-6">Daftar Mitra Bisnis</h1>
-                     <div class="w-[1217px] h-auto flex justify-between">
+                     <div class="w-full max-w-[1217px] h-auto flex justify-between">
                         <!-- Calon Mitra Bisnis -->
                         <div class="ml-4">
                             <label class="text-[#4D5E80] font-medium">Calon Mitra Bisnis <span class="text-[#FF5656]">*</span></label> 
-                            <form action="" class="w-[1145px] h-[40px] px-4 py-2 mt-2 border-[1px] rounded-lg flex justify-between text-sm">
+                            <form action="" class="w-full max-w-[1145px] h-[40px] px-4 py-2 mt-2 border-[1px] rounded-lg flex justify-between text-sm">
                                 <input type="text" placeholder="Pilih Calon Mitra Bisnis" class="w-[400px] outline-none">
                                 <svg width="16" height="16" class="cursor-pointer mt-1 ml-3" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70711 11.2071C8.31658 11.5976 7.68342 11.5976 7.29289 11.2071L2.29289 6.20711C1.90237 5.81658 1.90237 5.18342 2.29289 4.79289C2.68342 4.40237 3.31658 4.40237 3.70711 4.79289L8 9.08579L12.2929 4.79289C12.6834 4.40237 13.3166 4.40237 13.7071 4.79289C14.0976 5.18342 14.0976 5.81658 13.7071 6.20711L8.70711 11.2071Z" fill="#2671D9"/>
