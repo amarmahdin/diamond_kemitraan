@@ -2,13 +2,13 @@
 import logo from '@/assets/img/logo-diamond.png'
 
 defineProps({
-  className: {
+  alt: {
     type: String,
-    default: 'h-[13px] w-[77px]',
+    default: 'DIAMOND',
   },
 })
 </script>
 
 <template>
-  <img :src="logo" alt="DIAMOND" :class="className" />
+  <img :src="logo" :alt="alt" class="block h-auto w-auto object-contain" />
 </template>

@@ -45,7 +45,7 @@ function onBuatClick() {
 <template>
   <aside class="w-sidebar shrink-0 border-e border-surface-line">
     <div class="px-4 pt-8">
-      <BrandLogo />
+      <BrandLogo class="h-[13px] w-[77px]" />
       <hr class="mt-6 border-surface-line" />
     </div>
 
