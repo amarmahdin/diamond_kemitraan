@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased text-ink;
+  }
+
+  body {
+    @apply m-0 bg-white font-sans;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .page-body {
+    @apply h-auto bg-surface-page px-4 py-3;
+  }
+
+  .content-card {
+    @apply mx-auto min-h-screen w-full max-w-content rounded-lg bg-white p-1;
+  }
+
+  .content-inner {
+    @apply ml-4 w-full max-w-inner;
+  }
+
+  .page-title-bar {
+    @apply h-7 w-1.5 shrink-0 rounded-sm bg-brand;
+  }
+
+  .form-label {
+    @apply text-base font-medium text-ink-secondary;
+  }
+
+  .form-input {
+    @apply h-10 w-full rounded-lg border border-surface-line px-3 text-sm outline-none transition focus:border-brand;
+  }
+
+  .form-textarea {
+    @apply min-h-[88px] w-full rounded-lg border border-surface-line px-4 py-2 text-sm outline-none transition focus:border-brand;
+  }
+
+  .btn-primary {
+    @apply inline-flex h-12 items-center justify-center rounded-lg bg-brand px-4 font-semibold text-white transition hover:bg-brand/90;
+  }
+
+  .btn-outline {
+    @apply inline-flex h-12 items-center justify-center rounded-lg border border-brand px-4 font-semibold text-brand transition hover:bg-brand-soft;
+  }
+
+  .nav-item {
+    @apply flex h-10 cursor-pointer items-center rounded-lg px-3 py-2.5 text-sm font-semibold transition;
+  }
+
+  .nav-item-active {
+    @apply bg-brand text-white;
+  }
+
+  .nav-item-idle {
+    @apply text-ink hover:bg-brand-soft hover:text-brand;
+  }
+}

@@ -1,128 +1,40 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import Navbar from '@/components/navbar.vue';
-import Sidebar from '@/components/sidebar.vue';
-
+import WizardPageLayout from '@/layouts/WizardPageLayout.vue'
+import FormNavButtons from '@/components/ui/FormNavButtons.vue'
+import { PKS_STEPS } from '@/constants/navigation'
 </script>
 
 <template>
-    <div class="flex">
-        <Sidebar/>
-        <div class="flex-grow min-w-0">
-            <Navbar/>
-            <div class="h-[54px] flex">
-                <h1 class="text-[#2671D9] text-sm ml-6 mt-3">Buat</h1>
-                <svg width="16" height="16" viewBox="0 0 16 16" class="mt-[20px] ml-1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2071 7.29289C11.5976 7.68342 11.5976 8.31658 11.2071 8.70711L6.20711 13.7071C5.81658 14.0976 5.18342 14.0976 4.79289 13.7071C4.40237 13.3166 4.40237 12.6834 4.79289 12.2929L9.08579 8L4.79289 3.70711C4.40237 3.31658 4.40237 2.68342 4.79289 2.29289C5.18342 1.90237 5.81658 1.90237 6.20711 2.29289L11.2071 7.29289Z" fill="#7F7F80"/>
-                </svg>
-                <h1 class="text-sm text-[#7F7F80] mt-3 ml-1">PKS</h1>
-            </div>
-            <div class="h-auto py-3 px-4 bg-slate-100">
+  <WizardPageLayout
+    :breadcrumb="[{ label: 'Buat' }, { label: 'PKS' }]"
+    title="PKS"
+    subtitle="Formulir Pengajuan Mitra"
+    :steps="PKS_STEPS"
+    :current-step="5"
+  >
+    <h2 class="px-4 py-6 text-xl font-medium text-ink">Daftar Mitra Bisnis</h2>
 
-                <!-- Start Content -->
-                <div class="w-full max-w-[1217px] p-1 rounded-lg h-auto bg-white min-h-screen mx-auto">
-                    <div class="flex pl-4 pt-4">
-                        <div class="w-[6px] h-7 bg-[#2671D9]"></div>
-                        <h1 class="text-xl font-medium ml-[6px]">PKS</h1>
-                     </div>
-                     <span class="text-base text-[#9C9C9C] pl-4">Formulir Pengajuan Mitra</span>
-
-                     <!-- Start Layout angka -->
-                     <div class="w-full max-w-[1217px] h-[59px]">
-                        <div class="flex justify-center mt-4">
-                            <div class="flex flex-col items-center">
-                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" width="32" height="32" rx="8" fill="#E9F1FB"/>
-                                    <path d="M17.7832 21.5H15.6709V15.7168C15.6709 15.5573 15.6732 15.3613 15.6777 15.1289C15.6823 14.8919 15.6891 14.6504 15.6982 14.4043C15.7074 14.1536 15.7165 13.9281 15.7256 13.7275C15.6755 13.7868 15.5729 13.8893 15.418 14.0352C15.2676 14.1764 15.1263 14.304 14.9941 14.418L13.8457 15.3408L12.8271 14.0693L16.0469 11.5059H17.7832V21.5Z" fill="#2671D9"/>
-                                </svg>
-                                <span class="text-sm text-[#2671D9] mt-1">Dasar</span>
-                            </div>
-                            <svg width="34" height="2" class="ml-4 mt-6" viewBox="0 0 34 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.5" y1="1" x2="33.5" y2="1" stroke="#BAD1F3"/>
-                            </svg>
-                            <div class="flex flex-col items-center ml-2">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="32" height="32" rx="8" fill="#E9F1FB"/>
-                                    <path d="M19.0469 21.5H12.0605V20.0303L14.5693 17.4941C15.0752 16.9746 15.4808 16.5417 15.7861 16.1953C16.096 15.8444 16.3193 15.5254 16.4561 15.2383C16.5973 14.9512 16.668 14.6436 16.668 14.3154C16.668 13.9189 16.5563 13.6227 16.333 13.4268C16.1143 13.2262 15.8203 13.126 15.4512 13.126C15.0638 13.126 14.6878 13.2148 14.3232 13.3926C13.9587 13.5703 13.5781 13.8232 13.1816 14.1514L12.0332 12.791C12.3203 12.5449 12.6234 12.3125 12.9424 12.0938C13.266 11.875 13.6396 11.6995 14.0635 11.5674C14.4919 11.4307 15.0046 11.3623 15.6016 11.3623C16.2578 11.3623 16.8206 11.4808 17.29 11.7178C17.764 11.9548 18.1286 12.2783 18.3838 12.6885C18.639 13.0941 18.7666 13.5544 18.7666 14.0693C18.7666 14.6208 18.6572 15.1243 18.4385 15.5801C18.2197 16.0358 17.9007 16.487 17.4814 16.9336C17.0667 17.3802 16.5654 17.8747 15.9775 18.417L14.6924 19.627V19.7227H19.0469V21.5Z" fill="#2671D9"/>
-                                </svg>
-                                <span class="text-sm text-[#2671D9] mt-1">RAB</span>
-                            </div>
-                            <svg width="34" height="2" class="mt-6 ml-2" viewBox="0 0 34 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.5" y1="1" x2="33.5" y2="1" stroke="#E5E7E9"/>
-                            </svg>
-                            <div class="flex flex-col items-center ml-3">
-                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" width="32" height="32" rx="8" fill="#E9F1FB"/>
-                                    <path d="M19.1572 13.7412C19.1572 14.2015 19.0615 14.6003 18.8701 14.9375C18.6787 15.2747 18.4189 15.5505 18.0908 15.7646C17.7673 15.9788 17.4027 16.1361 16.9971 16.2363V16.2773C17.7992 16.3776 18.4076 16.6237 18.8223 17.0156C19.2415 17.4076 19.4512 17.9316 19.4512 18.5879C19.4512 19.1712 19.3076 19.693 19.0205 20.1533C18.738 20.6136 18.3005 20.9759 17.708 21.2402C17.1156 21.5046 16.3522 21.6367 15.418 21.6367C14.8665 21.6367 14.3516 21.5911 13.873 21.5C13.3991 21.4134 12.9525 21.279 12.5332 21.0967V19.2988C12.9616 19.5176 13.4105 19.6839 13.8799 19.7979C14.3493 19.9072 14.7868 19.9619 15.1924 19.9619C15.9489 19.9619 16.4775 19.832 16.7783 19.5723C17.0837 19.3079 17.2363 18.9388 17.2363 18.4648C17.2363 18.1868 17.1657 17.9521 17.0244 17.7607C16.8831 17.5693 16.637 17.4235 16.2861 17.3232C15.9398 17.223 15.4544 17.1729 14.8301 17.1729H14.0713V15.5527H14.8438C15.459 15.5527 15.9261 15.4958 16.2451 15.3818C16.5687 15.2633 16.7874 15.1038 16.9014 14.9033C17.0199 14.6982 17.0791 14.4658 17.0791 14.2061C17.0791 13.8506 16.9697 13.5726 16.751 13.3721C16.5322 13.1715 16.1676 13.0713 15.6572 13.0713C15.3382 13.0713 15.0465 13.1123 14.7822 13.1943C14.5225 13.2718 14.2878 13.3675 14.0781 13.4814C13.8685 13.5908 13.6839 13.6979 13.5244 13.8027L12.5469 12.3467C12.9388 12.0641 13.3968 11.8294 13.9209 11.6426C14.4495 11.4557 15.0785 11.3623 15.8076 11.3623C16.8376 11.3623 17.6533 11.5697 18.2549 11.9844C18.8564 12.3991 19.1572 12.9847 19.1572 13.7412Z" fill="#2671D9"/>
-                                </svg>
-                                <span class="text-sm text-[#2671D9] mt-1">Ruang Lingkup</span>
-                            </div>
-                            <svg width="34" height="2" class="mt-6 ml-3" viewBox="0 0 34 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.5" y1="1" x2="33.5" y2="1" stroke="#E5E7E9"/>
-                            </svg>
-                            <div class="flex flex-col items-center ml-3">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="32" height="32" rx="8" fill="#E9F1FB"/>
-                                    <path d="M19.2725 19.4287H18.0693V21.5H16.0049V19.4287H11.7393V17.959L16.1211 11.5059H18.0693V17.7881H19.2725V19.4287ZM16.0049 17.7881V16.0928C16.0049 15.9333 16.0072 15.7441 16.0117 15.5254C16.0208 15.3066 16.0299 15.0879 16.0391 14.8691C16.0482 14.6504 16.0573 14.4567 16.0664 14.2881C16.0801 14.1149 16.0892 13.9941 16.0938 13.9258H16.0391C15.9525 14.1126 15.8613 14.2949 15.7656 14.4727C15.6699 14.6458 15.5583 14.8281 15.4307 15.0195L13.5986 17.7881H16.0049Z" fill="#2671D9"/>
-                                </svg>
-                                <span class="text-sm text-[#2671D9] mt-1">Lainnya</span>
-                            </div>
-                            <svg width="34" height="2" class="mt-6 ml-3" viewBox="0 0 34 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.5" y1="1" x2="33.5" y2="1" stroke="#E5E7E9"/>
-                            </svg>
-                            <div class="flex flex-col items-center ml-3">
-                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="1" y="0.5" width="31" height="31" rx="7.5" fill="#2671D9"/>
-                                    <rect x="1" y="0.5" width="31" height="31" rx="7.5" stroke="#2671D9"/>
-                                    <path d="M16.1973 15.1152C16.8079 15.1152 17.3503 15.2314 17.8242 15.4639C18.3027 15.6963 18.6787 16.0381 18.9521 16.4893C19.2256 16.9404 19.3623 17.4964 19.3623 18.1572C19.3623 18.8773 19.2119 19.4993 18.9111 20.0234C18.6149 20.543 18.1706 20.9417 17.5781 21.2197C16.9902 21.4977 16.2565 21.6367 15.377 21.6367C14.8529 21.6367 14.3584 21.5911 13.8936 21.5C13.4333 21.4134 13.0299 21.279 12.6836 21.0967V19.2715C13.0299 19.4538 13.4447 19.6087 13.9277 19.7363C14.4154 19.8594 14.8734 19.9209 15.3018 19.9209C15.721 19.9209 16.0742 19.8662 16.3613 19.7568C16.6484 19.6429 16.8649 19.4697 17.0107 19.2373C17.1611 19.0003 17.2363 18.6995 17.2363 18.335C17.2363 17.8473 17.0723 17.4736 16.7441 17.2139C16.416 16.9541 15.9124 16.8242 15.2334 16.8242C14.9736 16.8242 14.7025 16.8493 14.4199 16.8994C14.1419 16.9495 13.9095 16.9997 13.7227 17.0498L12.8818 16.5986L13.2578 11.5059H18.6787V13.2969H15.1104L14.9258 15.2588C15.0807 15.2269 15.2493 15.195 15.4316 15.1631C15.6139 15.1312 15.8691 15.1152 16.1973 15.1152Z" fill="white"/>
-                                </svg>
-                                <span class="text-sm text-[#2671D9] mt-1">Daftar Mitra Bisnis</span>
-                            </div>
-                            <svg width="34" height="2" class="mt-6 ml-3" viewBox="0 0 34 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.5" y1="1" x2="33.5" y2="1" stroke="#E5E7E9"/>
-                            </svg>
-                            <div class="flex flex-col items-center ml-3">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" fill="white"/>
-                                    <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" stroke="#9C9C9C"/>
-                                    <path d="M11.9922 17.2549C11.9922 16.6807 12.0332 16.1133 12.1152 15.5527C12.2018 14.9876 12.3499 14.4567 12.5596 13.96C12.7692 13.4587 13.0632 13.0166 13.4414 12.6338C13.8197 12.2464 14.3005 11.9434 14.8838 11.7246C15.4671 11.5013 16.1735 11.3896 17.0029 11.3896C17.1989 11.3896 17.4268 11.3988 17.6865 11.417C17.9508 11.4307 18.1696 11.4557 18.3428 11.4922V13.1807C18.1605 13.1396 17.9645 13.1077 17.7549 13.085C17.5498 13.0576 17.3447 13.0439 17.1396 13.0439C16.3102 13.0439 15.6676 13.1761 15.2119 13.4404C14.7607 13.7048 14.4417 14.0716 14.2549 14.541C14.0726 15.0059 13.9655 15.5482 13.9336 16.168H14.0225C14.1501 15.9447 14.3096 15.7464 14.501 15.5732C14.6969 15.4001 14.9339 15.2633 15.2119 15.1631C15.4899 15.0583 15.8158 15.0059 16.1895 15.0059C16.7728 15.0059 17.2786 15.1312 17.707 15.3818C18.1354 15.6279 18.4658 15.9857 18.6982 16.4551C18.9307 16.9245 19.0469 17.4964 19.0469 18.1709C19.0469 18.891 18.9079 19.5107 18.6299 20.0303C18.3519 20.5498 17.9577 20.9486 17.4473 21.2266C16.9414 21.5 16.3398 21.6367 15.6426 21.6367C15.1322 21.6367 14.6559 21.5501 14.2139 21.377C13.7718 21.1992 13.3844 20.9303 13.0518 20.5703C12.7191 20.2103 12.4593 19.7568 12.2725 19.21C12.0856 18.6585 11.9922 18.0068 11.9922 17.2549ZM15.6016 19.9482C16.0163 19.9482 16.3535 19.807 16.6133 19.5244C16.873 19.2419 17.0029 18.7998 17.0029 18.1982C17.0029 17.7106 16.889 17.3278 16.6611 17.0498C16.4378 16.7673 16.0983 16.626 15.6426 16.626C15.3327 16.626 15.0592 16.6966 14.8223 16.8379C14.5898 16.9746 14.4098 17.1501 14.2822 17.3643C14.1546 17.5739 14.0908 17.7904 14.0908 18.0137C14.0908 18.2461 14.1227 18.4762 14.1865 18.7041C14.2503 18.932 14.346 19.1393 14.4736 19.3262C14.6012 19.513 14.7585 19.6634 14.9453 19.7773C15.1367 19.8913 15.3555 19.9482 15.6016 19.9482Z" fill="#9C9C9C"/>
-                                </svg>
-                                <span class="text-sm text-[#9C9C9C] mt-1">Lampiran</span>
-                            </div>
-                        </div>
-                     </div>
-                     <!-- End layout angka -->
-
-                     <h1 class="text-xl text-[#333333] font-medium pl-4 py-6">Daftar Mitra Bisnis</h1>
-                     <div class="w-full max-w-[1217px] h-auto flex justify-between">
-                        <!-- Calon Mitra Bisnis -->
-                        <div class="ml-4">
-                            <label class="text-[#4D5E80] font-medium">Calon Mitra Bisnis <span class="text-[#FF5656]">*</span></label> 
-                            <form action="" class="w-full max-w-[1145px] h-[40px] px-4 py-2 mt-2 border-[1px] rounded-lg flex justify-between text-sm">
-                                <input type="text" placeholder="Pilih Calon Mitra Bisnis" class="w-[400px] outline-none">
-                                <svg width="16" height="16" class="cursor-pointer mt-1 ml-3" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.70711 11.2071C8.31658 11.5976 7.68342 11.5976 7.29289 11.2071L2.29289 6.20711C1.90237 5.81658 1.90237 5.18342 2.29289 4.79289C2.68342 4.40237 3.31658 4.40237 3.70711 4.79289L8 9.08579L12.2929 4.79289C12.6834 4.40237 13.3166 4.40237 13.7071 4.79289C14.0976 5.18342 14.0976 5.81658 13.7071 6.20711L8.70711 11.2071Z" fill="#2671D9"/>
-                                </svg>
-                            </form>
-                        </div>
-                     </div>
-                     
-                     <svg width="1150" class="mt-64 ml-4" height="1" viewBox="0 0 1150 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="1150" height="0" transform="translate(0 1)" fill="white"/>
-                        <line y1="0.5" x2="1150" y2="0.5" stroke="#E5E7E9"/>
-                    </svg>
-                    <div class="flex justify-end">
-                        <div class="mr-4 py-4">
-                            <router-link :to="'Pkslainnya'"><button class="w-[107px] h-12 font-medium rounded-lg text-[#2671D9] text-sm border-[1px] border-[#2671D9]">Sebelumnya</button></router-link>
-                        </div>
-                        <div class=" mr-11 py-4">
-                            <router-link :to="'Pkslampiran'"><button class="w-[107px] h-12 rounded-lg font-medium text-white text-sm bg-[#2671D9]">Selanjutnya</button></router-link>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Content -->
-
-            </div>
-        </div>
+    <div class="px-4">
+      <label class="form-label">
+        Calon Mitra Bisnis <span class="text-status-red">*</span>
+      </label>
+      <div class="form-input mt-2 flex items-center justify-between">
+        <input
+          type="text"
+          class="w-full outline-none"
+          placeholder="Pilih Calon Mitra Bisnis"
+        />
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8.70711 11.2071C8.31658 11.5976 7.68342 11.5976 7.29289 11.2071L2.29289 6.20711C1.90237 5.81658 1.90237 5.18342 2.29289 4.79289C2.68342 4.40237 3.31658 4.40237 3.70711 4.79289L8 9.08579L12.2929 4.79289C12.6834 4.40237 13.3166 4.40237 13.7071 4.79289C14.0976 5.18342 14.0976 5.81658 13.7071 6.20711L8.70711 11.2071Z"
+            fill="#2671D9"
+          />
+        </svg>
+      </div>
     </div>
+
+    <FormNavButtons prev-to="/Pkslainnya" next-to="/Pkslampiran" />
+  </WizardPageLayout>
 </template>
