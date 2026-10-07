@@ -8,7 +8,7 @@ const props = defineProps({
   variant: {
     type: String,
     default: 'user',
-    validator: () => ['user', 'admin'].includes(value),
+    validator: (value) => ['user', 'admin'].includes(value),
   },
 })
 
